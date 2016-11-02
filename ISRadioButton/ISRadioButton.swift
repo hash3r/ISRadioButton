@@ -184,7 +184,7 @@ public class  ISRadioButton: UIButton {
         iconColor.setStroke()
         iconPath.lineWidth = iconStrokeWidth;
         iconPath.stroke()
-        CGContextAddPath(context, iconPath.CGPath);
+        CGContextAddPath(context!, iconPath.CGPath);
         
         // draw indicator
         if (selected) {
@@ -201,10 +201,10 @@ public class  ISRadioButton: UIButton {
             
             indicatorColor.setFill()
             indicatorPath.fill()
-            CGContextAddPath(context, indicatorPath.CGPath);
+            CGContextAddPath(context!, indicatorPath.CGPath);
         }
         
-        let image:UIImage = UIGraphicsGetImageFromCurrentImageContext();
+        let image:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
         //        UIGraphicsPopContext()
         UIGraphicsEndImageContext();
         
